@@ -2038,9 +2038,11 @@ CURLcode operate(struct GlobalConfig *config, int argc, argv_item_t argv[])
       /* Check if we were asked for the help */
       if(res == PARAM_HELP_REQUESTED)
         tool_help();
+#ifndef NUTTX
       /* Check if we were asked for the manual */
       else if(res == PARAM_MANUAL_REQUESTED)
         hugehelp();
+#endif
       /* Check if we were asked for the version information */
       else if(res == PARAM_VERSION_INFO_REQUESTED)
         tool_version_info();

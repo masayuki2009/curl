@@ -134,6 +134,10 @@
 #  endif
 #endif
 
+#ifdef NUTTX
+#  include <sys/select.h>
+#endif
+
 /* ================================================================ */
 /*  If you need to include a system header file for your platform,  */
 /*  please, do it beyond the point further indicated in this file.  */

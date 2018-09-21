@@ -239,7 +239,11 @@ static void main_free(struct GlobalConfig *config)
 /*
 ** curl tool main function.
 */
+#if defined(BUILD_MODULE)
 int main(int argc, char *argv[])
+#else
+int curl_main(int argc, char *argv[])
+#endif
 {
   CURLcode result = CURLE_OK;
   struct GlobalConfig global;

@@ -395,12 +395,13 @@ typedef int sig_atomic_t;
  * Macro used to include assertion code only in debug builds.
  */
 
+#ifndef DEBUGASSERT
 #if defined(DEBUGBUILD) && defined(HAVE_ASSERT_H)
 #define DEBUGASSERT(x) assert(x)
 #else
 #define DEBUGASSERT(x) do { } WHILE_FALSE
 #endif
-
+#endif
 
 /*
  * Macro SOCKERRNO / SET_SOCKERRNO() returns / sets the *socket-related* errno
