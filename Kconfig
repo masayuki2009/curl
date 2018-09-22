@@ -6,5 +6,7 @@
 config EXTERNAL_CURL
 	bool "CURL library"
 	default n
+	select LIBC_SCANSET
+	select LIBC_LOCALTIME
 	---help---
 		Enables the CURL library.
