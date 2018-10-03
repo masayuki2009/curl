@@ -48,6 +48,10 @@
  */
 #include "curl.h"
 
+#ifdef NUTTX
+#  include <sys/select.h>
+#endif
+
 #ifdef  __cplusplus
 extern "C" {
 #endif
