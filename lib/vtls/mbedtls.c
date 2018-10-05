@@ -114,9 +114,6 @@ static int entropy_func_mutex(void *data, unsigned char *output, size_t len)
 
 #endif /* THREADING_SUPPORT */
 
-/* Define this to enable lots of debugging for mbedTLS */
-#undef MBEDTLS_DEBUG
-
 #ifdef MBEDTLS_DEBUG
 static void mbed_debug(void *context, int level, const char *f_name,
                        int line_nb, const char *line)
